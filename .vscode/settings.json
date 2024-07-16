@@ -4,6 +4,7 @@
         "*.html": "html",
         "iostream": "cpp",
         "ostream": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "iosfwd": "cpp"
     }
 }

@@ -1,45 +1,38 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int A,B,C;
-    cin>>A>>B>>C;
-    int first = A;
-    if (A>B)
-    {
-        first = B;
-    }
-    else if (B>C)
-    {
-        first = C;
-    }
-    int third = B;
-    if (B<A)
-    {
-        third = A;
-    }
-    else if (A<C)
-    {
-        third = C;
-    }
-    int second;
-    if (C>first && C<third)
-    {
-        second = C;
-    }
-    else if (A>first && A<third)
-    {
-        second = A;
-    }
-    else if (B>first && B<third)
-    {
-        second = B;
-    }
-    
-    
-    cout<<first<<endl<<second<<endl<<third<<endl;
-    cout<<endl;
-    cout<<A<<endl<<B<<endl<<C<<endl;
+typedef long long int ll;
 
+
+int main()
+{
+    ll a, b, c;
+    cin >> a >> b >> c;
+    ll x = a, y = b, z = c, temp;
+    if (a > b)
+    {
+        temp = a;
+        a = b;
+        b = temp;
+    }
+    if (a > c)
+    {
+        temp = a;
+        a = c;
+        c = temp;
+    }
+    if (b > c)
+    {
+        temp = b;
+        b = c;
+        c = temp;
+    }
+    cout << a << endl
+         << b << endl
+         << c << endl
+         << endl
+         << x << endl
+         << y << endl
+         << z << endl;
     return 0;
 }
