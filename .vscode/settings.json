@@ -3,6 +3,7 @@
         "*.php": "php",
         "*.html": "html",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "valarray": "cpp"
     }
 }
