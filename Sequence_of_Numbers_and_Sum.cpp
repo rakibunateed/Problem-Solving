@@ -2,30 +2,23 @@
 using namespace std;
 
 int main(){
-    long long N,M;
-    cin>>N>>M;
-    int sum = 0;
-    if (N<= 0 && M<= 0)
+    while (true)
     {
-        
-    }
-    else if (N > M)
-    {
-        for (long long i = M; i <=N; i++)
+        long long M,N;
+        cin>>N>>M;
+        long long  start = min(N,M);
+        long long  end = max(N,M);
+        long long sum = 0;
+        if (N<=0 || M<=0)
         {
+            break;
+        }
+        for (long long  i = start; i <=end; i++)
+        {
+            cout<<i<<" ";
             sum+=i;
         }
-        cout<<M<<" "<<M+1<<" "<<N-1<<" "<<N<<" "<<"sum"<<" "<<"="<<sum<<endl;
-        
-    }
-    else if (N < M)
-    {
-        for (long long i = N; i <=M; i++)
-        {
-            sum+=i;
-        }
-        cout<<N<<" "<<N+1<<" "<<M-1<<" "<<M<<" "<<"sum"<<" "<<"="<<sum<<endl;
-        
+        cout<<"sum ="<<sum<<endl;  
     }
     return 0;
 }
