@@ -4,57 +4,37 @@ using namespace std;
 
 typedef long long int ll;
 void GCD(int X,int Y){
+    // int m1 = -1;
+    // int m2 = -2;
 
-    for (int i = 1; i <= X; i++)
-    {
-        if (X % i == 0)
-        {
-            if (X == i)
-            {
-               continue;
-            }
-            
-            cout<<i<<" ";
-        } 
-    }
-    cout<<endl;
-    for (int i = 1; i <= Y; i++)
-    {
-        if (Y % i == 0)
-        {
-            if (Y == i)
-            {
-               continue;
-            }
-            cout<<i<<" ";
-        }
-    }
-    
+    // for (int i = 1; i < X; i++)
+    // {
+    //     if (X % i == 0)
+    //     {
+    //         m1 = i;  
+           
+    //     } 
+         
+    // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // int result = __gcd(X,Y);
+    // for (int j = 1; j < Y; j++)
+    // {
+    //     if (Y % j == 0)
+    //     {
+    //        m2 = j; 
+    //     }
+    // }
+    // int result = m1-m2;
     // cout<<result;
+    // // if (m1 == m2)
+    // // {
+    // //      cout<<max(m1,m2)<<endl;;
+    // // }
+    
+  
+
+    int result = __gcd(X,Y);
+    cout<<result;
 }
 
 int main(){

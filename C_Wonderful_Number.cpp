@@ -2,40 +2,32 @@
 using namespace std;
 
 typedef long long int ll;
-void palindrome(int p){
+ll palindrome(int p){
     ll temp2 = p;
-    ll reminder ;
+    ll r ;
     ll sum =0;
     while (temp2 !=0)
     {
-        reminder = temp2 % 10 ;
-        sum = sum*10 + reminder;
+        r = temp2 % 10 ;
+        sum = sum*10 + r;
         temp2 = temp2 /10;   
     }
-    if (sum == p)
-    {
-      if (p % 2 !=0)
+    return sum == p;
+
+}
+void wonderful(ll num){
+    if (num % 2 !=0 && palindrome(num))
     {
         cout<<"YES"<<endl;
     }
-    else
-    {
-    cout<<"NO"<<endl;
+    else{
+        cout<<"NO"<<endl;
     }
-    }   
-    else
-    {
-    cout<<"NO"<<endl;
-    }
-    
-}
-void odd(int i){
-    ll temp = i;
-    palindrome(temp);           
+          
 }
 int main(){
     ll N;
     cin>>N;
-    odd(N);
+    wonderful(N);
     return 0;
 }
