@@ -12,9 +12,7 @@ int sumOfDigit(int n)
     {
         sum += n%10;
         n/=10;
-    }
-    
-    
+    } 
     return sum;
 }
 int main()
@@ -30,8 +28,7 @@ int main()
         if (digitSum >= A && digitSum <= B)
         {
             totalSum +=i;
-        }
-        
+        }    
     }
     cout<<totalSum<<endl;
     return 0;
