@@ -9,17 +9,23 @@ int main(){
     {
         prime = false;
     }
-    for (long long i = 2; i <= X; i++)
+    for (long long i = 2; i <= X/2; i++)
     {
         if (X % i == 0)
         {
             prime = false;
-            cout<<i<<endl;
+            break;
         } 
-              
-   
-  
     }
+    if (prime)
+    {
+       cout<<"YES"<<endl;
+    }
+    else
+    {
+       cout<<"NO"<<endl;
+    }
+    
    
     return 0;
 }
