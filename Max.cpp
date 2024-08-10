@@ -16,23 +16,15 @@ int main()
     {
         cin>>A[i];
     }
-    ll index = -1;
-    ll X;
-      cin>>X;
-    for (int i = 0; i <N; i++)
+    ll max = A[0];
+    for (int i = 0; i < N; i++)
     {
-        if (A[i] == X) {
-            index = i;
-            break;
+        if (A[i] > max)
+        {
+           max = A[i];
         }
+        
     }
-     if (index != X)
-    {
-       cout<<index<<" ";
-    }
-    else
-    {
-        cout<<"-1"<<endl;
-    }
-return 0;
+    cout<<max<<endl;
+    return 0;
 }

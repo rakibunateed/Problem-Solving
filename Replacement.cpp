@@ -16,23 +16,21 @@ int main()
     {
         cin>>A[i];
     }
-    ll index = -1;
-    ll X;
-      cin>>X;
-    for (int i = 0; i <N; i++)
+    for (int i = 0; i < N; i++)
     {
-        if (A[i] == X) {
-            index = i;
-            break;
+        if (A[i] >= 1)
+        {
+            cout<<"1 ";
         }
+        else if (A[i] <= -1)
+        {
+            cout<<"2 ";
+        }
+        else
+        {
+            cout<<"0 ";
+        }    
     }
-     if (index != X)
-    {
-       cout<<index<<" ";
-    }
-    else
-    {
-        cout<<"-1"<<endl;
-    }
-return 0;
+    cout<<endl; 
+    return 0;
 }
