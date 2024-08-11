@@ -17,6 +17,7 @@ void solve()
    {
     cout<<"NO"<<endl;
    }
+  cout<< endl;
    
 }
 int main()
