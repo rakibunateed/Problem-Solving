@@ -37,7 +37,6 @@ int main()
        int temp = min;
        min = max;
        max = temp;
-       cout<<A[i]<<" ";
     }
     
     
