@@ -7,8 +7,6 @@ int main(){
     y = (N / 365);
     m = (N % 365) / 30;
     d = (N % 365) % 30;
-
-    cout<<y<<" years"<<endl<<m<<" months"<<endl<<d<<" days"<<endl;
-    
+    cout<< y <<" ano(s)"<< endl << m <<" mes(es)"<< endl << d <<" dia(s)"<< endl;
     return 0;
 }
