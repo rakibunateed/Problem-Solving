@@ -6,18 +6,16 @@ int main(){
     cin>>A>>B;
     if (A%B == 0 )
     {
-        cout<<"Multiples"<<endl;
+        cout<<"Sao Multiplos"<<endl;
     }
     else if (B % A ==0)
     {
-       cout<<"Multiples"<<endl;
+       cout<<"Sao Multiplos"<<endl;
     }
-    
     else
     {
-        cout<<"No Multiples"<<endl;
+        cout<<"Nao sao Multiplos"<<endl;
          
     }
-    
     return 0;
 }
