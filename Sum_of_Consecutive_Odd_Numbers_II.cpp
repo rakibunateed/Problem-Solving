@@ -20,8 +20,7 @@ void solve()
         sum+=i;
        }   
     }
-    cout<<sum<<endl;
-    
+    cout<<sum<<endl;   
 }
 int main()
 {

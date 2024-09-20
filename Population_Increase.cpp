@@ -26,9 +26,7 @@ void solve()
     else
     {
         cout<<count<<" anos."<<endl;
-    }
-    
-    
+    }  
 }
 int main()
 {

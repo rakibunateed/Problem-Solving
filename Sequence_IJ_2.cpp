@@ -16,6 +16,5 @@ int main()
             cout<<"I="<<i<<" "<<"J="<<j<<endl;
         }  
     }
-    
     return 0;
 }

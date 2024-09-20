@@ -25,9 +25,7 @@ int main()
             out++;
         }
     }
-    cout<<in<<" in"<<endl<<out<<" out"<<endl;  
-    
-    
+    cout<<in<<" in"<<endl<<out<<" out"<<endl;   
     return 0;
 }
 

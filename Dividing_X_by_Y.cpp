@@ -13,14 +13,11 @@ void solve()
     if (y == 0)
     {
         cout<<"divisao impossivel"<<endl;
-       
     }else
     {
          double div = x / y;
         cout<<div<<endl;
-    }
-    
-    
+    }  
 }
 int main()
 {

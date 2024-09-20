@@ -20,7 +20,6 @@ int main()
             ++positive;   
         }  
     }
-    cout<<positive<<" valores positivos"<<endl;
-    
+    cout<<positive<<" valores positivos"<<endl; 
     return 0;
 }

@@ -29,8 +29,6 @@ void solve()
     {
         cout<<"EVEN POSITIVE"<<endl;
     }
-    
-
 }
 int main()
 {
