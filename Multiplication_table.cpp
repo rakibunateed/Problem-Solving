@@ -4,10 +4,10 @@ using namespace std;
 int main(){
     long long N;
     cin>>N;
-    for (long long i = 1; i <= 12; i++)
+    for (long long i = 1; i <= 10; i++)
     {
         long long mul = N * i ;
-        cout<<N<<" * "<<i<<" = "<<mul<<endl;
+        cout<<i<<" x "<<N<<" = "<<mul<<endl;
     }
     return 0;
 }

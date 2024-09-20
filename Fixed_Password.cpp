@@ -2,19 +2,19 @@
 using namespace std;
 
 int main(){
-    long long pass = 1999;
+    long long pass = 2002;
     while (true)
     {
         long long X;
         cin>>X;
         if (X == pass)
         {
-           cout<<"Correct"<<endl;
+           cout<<"Acesso Permitido"<<endl;
            break;
         }
         else
         {
-            cout<<"Wrong"<<endl;    
+            cout<<"Senha Invalida"<<endl;    
         }  
     }
     return 0;

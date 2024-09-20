@@ -4,21 +4,19 @@ using namespace std;
 int main(){
     while (true)
     {
-        long long M,N;
+        int M,N;
         cin>>N>>M;
-        long long  start = min(N,M);
-        long long  end = max(N,M);
-        long long sum = 0;
+        int Sum = 0;
         if (N<=0 || M<=0)
         {
             break;
         }
-        for (long long  i = start; i <=end; i++)
+        for (long long  i = min(N,M); i <=max(N,M); i++)
         {
             cout<<i<<" ";
-            sum+=i;
+            Sum+=i;
         }
-        cout<<"sum ="<<sum<<endl;  
+        cout<<"Sum="<<Sum<<endl;  
     }
     return 0;
 }
