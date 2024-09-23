@@ -30,8 +30,7 @@ int main()
        else if (n == 4)
        {
         break;;
-       }
-       
+       }  
     }
     cout<<"MUITO OBRIGADO"<<endl<<"Alcool: "<<alcool<<endl<<"Gasolina: "<<gasolina<<endl<<"Diesel: "<<Diesel<<endl; 
     return 0;
