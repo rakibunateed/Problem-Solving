@@ -9,21 +9,32 @@ int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    int n,k,count =0;
-    cin>>n>>k;
+    int n;
+    cin>>n;
     int a[n];
+    int count = 0;
     for (int i = 0; i < n; i++)
     {
-        cin>>a[i];
+       cin>>a[i];
     }
-    int advance = a[k-1];
     for (int i = 0; i < n; i++)
     {
-        if (a[i] >= a[i+1] && a[i] >= 0 )
+        if (a[i] == 1)
         {
-           count++;
+            count++;
         }
-    } 
-    cout<<count;
+        
+    }
+    if (count >= 1)
+    {
+        cout<<"HARD"<<endl;
+    }
+    else
+    {
+        cout<<"EASY"<<endl;
+    }
+    
+    
+    
     return 0;
 }

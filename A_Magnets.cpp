@@ -9,21 +9,20 @@ int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    int n,k,count =0;
-    cin>>n>>k;
-    int a[n];
+    int n,count = 1;
+    cin>>n;
+    string a[n];
     for (int i = 0; i < n; i++)
     {
         cin>>a[i];
     }
-    int advance = a[k-1];
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n-1; i++)
     {
-        if (a[i] >= a[i+1] && a[i] >= 0 )
+        if (a[i] != a[i+1])
         {
-           count++;
-        }
-    } 
-    cout<<count;
+            count ++;
+        }  
+    }
+    cout<<count;  
     return 0;
 }
