@@ -9,13 +9,13 @@ int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    ll a,b,count = 0;
-    cin>>a>>b;
-    for (int i = a; i <= b; i++)
-    {
-        count ++;    
-    }
-    cout<<count<<endl;
-    
+    double a,b,t,interval,mul;
+    cin>>a>>b>>t;
+
+    interval = floor((t+.5) / a);
+    mul = interval * b;
+    cout<<mul<<endl;
+
+
     return 0;
 }

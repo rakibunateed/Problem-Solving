@@ -9,13 +9,19 @@ int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    ll a,b,count = 0;
-    cin>>a>>b;
-    for (int i = a; i <= b; i++)
+    ll a,b,c;
+    cin>>a>>b>>c;
+
+    for (int i = a; i <=b; i++)
     {
-        count ++;    
+       if (i % c == 0)
+       {
+        cout<<i<<endl;
+        return 0;
+       }
+       
     }
-    cout<<count<<endl;
+    cout<<"-1"<<endl;
     
     return 0;
 }

@@ -9,28 +9,30 @@ int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    int n;
-    cin>>n;
-    int a[n];
-    int count = 0;
+    ll n,count =0,x;
+    cin>>n>>x;
+    ll a[n];
     for (int i = 0; i < n; i++)
     {
-       cin>>a[i];
+        cin>>a[i];
     }
+    
     for (int i = 0; i < n; i++)
     {
-        if (a[i] == 1)
+        if (a[i] == x)
         {
             count++;
-        } 
+        }  
     }
     if (count >= 1)
     {
-        cout<<"HARD"<<endl;
+        cout<<"YES"<<endl;
     }
     else
     {
-        cout<<"EASY"<<endl;
-    } 
+        cout<<"NO"<<endl;
+    }
+    
+    
     return 0;
 }
