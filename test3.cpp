@@ -9,17 +9,17 @@ int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    ll a,b,c;
-    cin>>a>>b>>c;
-
-    for (int i = a; i <=b; i++)
+    int n;
+    cin>>n;
+    int count = 0;
+    for (int i = 0; i < n; i++)
     {
-       if (i % c == 0)
-       {
-        cout<<i<<endl;
-        return 0;
-       }   
+        int p,q;
+        cin>>p>>q;
+       if (q - p >= 1) {
+            count++;
+        }   
     }
-    cout<<"-1"<<endl;
+    cout<<count<<endl;
     return 0;
 }

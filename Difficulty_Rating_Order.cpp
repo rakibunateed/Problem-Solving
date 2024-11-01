@@ -7,35 +7,28 @@ typedef pair<int, int> pi;
 
 void solve()
 {
-    ll n,x,y;
-    cin>>n>>x>>y;
+    ll n,count =1;
+    cin>>n;
     ll a[n];
-    ll sum1 = 0,sum2 = 0,result;
     for (int i = 0; i < n; i++)
     {
         cin>>a[i];
     }
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n-1; i++)
     {
-        sum1 += a[i];   
-    }
-    for (int i = 0; i < n; i++)
-    {
-        if (a[i] > y)
+        if (a[i] <= a[i+1])
         {
-           a[i] -= y;
-           sum2+= a[i];
-        }   
+            count++;
+        }  
     }
-    result = x+sum2;
-    if (result < sum1)
+    if (count == n)
     {
-        cout<<"COUPON"<<endl;
+        cout<<"Yes"<<endl;
     }
     else
     {
-        cout<<"NO COUPON"<<endl;
-    }  
+        cout<<"No"<<endl;
+    }   
 }
 int main()
 {

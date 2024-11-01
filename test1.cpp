@@ -9,11 +9,12 @@ int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    double a,b,t,interval,mul;
-    cin>>a>>b>>t;
-
-    interval = floor((t+.5) / a);
-    mul = interval * b;
-    cout<<mul<<endl;
-    return 0;
+    int x;
+    cin>>x;
+    int steps = x / 5;       
+    if (x % 5 != 0)
+    {
+        steps += 1;
+    }              
+    cout << steps << endl;
 }
