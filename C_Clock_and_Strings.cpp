@@ -1,32 +1,31 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
-typedef long long int ll;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
+bool doesIntersect(int a, int b, int c, int d) {
+    vector<int> positions = {a, b, c, d};
+    sort(positions.begin(), positions.end());
 
-void solve()
-{
-    ll a,b,c,d;
-    cin>>a>>b>>c>>d;
-    if (a < d && b < c)
-    {
-        cout<<"YES"<<endl;
+    // Check if (a, b) and (c, d) are separate intervals on the clock
+    if ((a == positions[0] && b == positions[1] && c == positions[2] && d == positions[3]) ||
+        (c == positions[0] && d == positions[1] && a == positions[2] && b == positions[3])) {
+        return false;
     }
-    else
-    {
-        cout<<"NO"<<endl;
-    }  
+    return true;
 }
-int main()
-{
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    ll t;
+
+int main() {
+    int t;
     cin >> t;
-    while (t--)
-    {
-        solve();
+    while (t--) {
+        int a, b, c, d;
+        cin >> a >> b >> c >> d;
+        if (doesIntersect(a, b, c, d)) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
     }
     return 0;
 }

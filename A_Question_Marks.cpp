@@ -49,7 +49,6 @@ void solve()
      }
      ll sum = A+B+C+D+ignore;
      cout<<sum<<endl;
-
 }
 int main()
 {
