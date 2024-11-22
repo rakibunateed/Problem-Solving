@@ -1,0 +1,1 @@
+{"name":"Local: berry","url":"c:\\Problem-Solving\\berry.cpp","tests":[{"id":1732291020818,"input":"7 3\nOOXOOOO","output":"1"},{"id":1732291030749,"input":"12 2\nOXXOOOXOOOOX","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Problem-Solving\\berry.cpp","group":"local","local":true}

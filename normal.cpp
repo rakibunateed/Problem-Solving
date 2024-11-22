@@ -8,16 +8,10 @@ typedef pair<int, int> pi;
 int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
-  ll n, m;
-  cin >> n, m;
-  ll a[m];
-  for (int i = 0; i < m; i++) {
-    cin >> a[i];
-  }
-
-  for (int i = 0; i < m; i++) {
-    cout << a[i] << " ";
-  }
+  string s;
+  cin >> s;
+  cout << s[1] << s[2] << s[0] << " ";
+  cout << s[2] << s[0] << s[1] << endl;
 
   return 0;
 }

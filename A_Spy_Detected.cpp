@@ -2,25 +2,22 @@
 using namespace std;
 
 typedef long long int ll;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
-
 void solve() {
   ll n;
   cin >> n;
-  ll a[n];
+  vector<int> vec(n);
   for (int i = 0; i < n; i++) {
-    cin >> a[i];
+    cin >> vec[i];
   }
-  if (a[0] != a[1]) {
-    if (a[0] != a[2]) {
+  if (vec[0] != vec[1]) {
+    if (vec[0] != vec[2]) {
       cout << 1 << endl;
     } else {
       cout << 2 << endl;
     }
   } else {
     for (int i = 2; i < n; i++) {
-      if (a[i] != a[0]) {
+      if (vec[i] != vec[0]) {
         cout << i + 1 << endl;
         break;
       }

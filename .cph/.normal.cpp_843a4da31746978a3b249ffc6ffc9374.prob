@@ -1,0 +1,1 @@
+{"name":"Local: normal","url":"c:\\Problem-Solving\\normal.cpp","tests":[{"id":1732290564734,"input":"379","output":"793 937"},{"id":1732290623017,"input":"919","output":"199 991"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Problem-Solving\\normal.cpp","group":"local","local":true}

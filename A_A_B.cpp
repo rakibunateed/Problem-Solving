@@ -5,19 +5,18 @@ typedef long long int ll;
 typedef vector<int> vi;
 typedef pair<int, int> pi;
 
+void solve() {
+  ll a, b;
+  cin >> a >> b;
+  cout << a + b << endl;
+}
 int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
-  ll n, m;
-  cin >> n, m;
-  ll a[m];
-  for (int i = 0; i < m; i++) {
-    cin >> a[i];
+  ll t;
+  cin >> t;
+  while (t--) {
+    solve();
   }
-
-  for (int i = 0; i < m; i++) {
-    cout << a[i] << " ";
-  }
-
   return 0;
 }
