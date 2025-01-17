@@ -8,20 +8,7 @@ typedef pair<int, int> pi;
 void solve() {
   ll n;
   cin >> n;
-  bool find = false;
-  while (true) {
-    if (n == 0) {
-      find = true;
-      break;
-    } else if (n < 0) {
-      break;
-    } else if (n >= 7) {
-      n -= 7;
-    } else {
-      n -= 3;
-    }
-  }
-  if (find) {
+  if (n % 3 == 0 || n % 7 == 0) {
     cout << "YES" << endl;
   } else {
     cout << "NO" << endl;

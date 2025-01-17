@@ -2,33 +2,21 @@
 using namespace std;
 
 typedef long long int ll;
-
 void solve() {
   ll n;
   cin >> n;
-  bool find = false;
-  if (n <= 2) {
-    cout << "NO" << endl;
-    return;
+  while (n % 2 == 0) {
+    n /= 2;
   }
-
-  for (ll i = 3; i <= n; i += 2) {
-    if (n % i == 0) {
-      find = true;
-      break;
-    }
-  }
-  if (find) {
-    cout << "YES" << endl;
+  if (n > 1) {
+    cout << "YES\n";
   } else {
-    cout << "NO" << endl;
+    cout << "NO\n";
   }
 }
-
 int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
-
   ll t;
   cin >> t;
   while (t--) {

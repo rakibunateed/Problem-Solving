@@ -27,6 +27,6 @@ int main() {
       min = a[i];
     }
   }
-  cout << max - min << endl;
+  cout << (max - min) << endl;
   return 0;
 }

@@ -1,42 +1,38 @@
-#include <algorithm>
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
+typedef long long int ll;
+typedef vector<int> vi;
+typedef pair<int, int> pi;
+
 int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
   int n;
   cin >> n;
-
-  vector<int> sushi(n);
-  for (int i = 0; i < n; ++i) {
-    cin >> sushi[i];
+  int a[n];
+  int count01 = 0, count11 = 0, count02 = 0, count22 = 0;
+  for (int i = 0; i < n; i++) {
+    cin >> a[i];
   }
-
-  int max_length = 0;
-  int count_tuna = 0, count_eel = 0;
-
-  // Variables to track the current segment
-  int prev_type = sushi[0];
-  int curr_length = 1;
-  vector<int> segments;  // To store lengths of consecutive blocks
-
-  // Divide the sushi into blocks of consecutive types
-  for (int i = 1; i < n; ++i) {
-    if (sushi[i] == prev_type) {
-      curr_length++;
-    } else {
-      segments.push_back(curr_length);
-      prev_type = sushi[i];
-      curr_length = 1;
+  for (int i = 0; i < n; i++) {
+    if (a[i] == 2) {
+      count01 = max(count01, count11);
+      count11 = 0;
+      continue;
     }
+    count11++;
   }
-  segments.push_back(curr_length);  // Push the last block
-
-  // Find the maximum valid segment
-  for (size_t i = 0; i < segments.size() - 1; ++i) {
-    max_length = max(max_length, 2 * min(segments[i], segments[i + 1]));
+  int count1 = max(count01, count11);
+  for (int i = 0; i < n; i++) {
+    if (a[i] == 1) {
+      count02 = max(count02, count22);
+      count22 = 0;
+      continue;
+    }
+    count22++;
   }
-
-  cout << max_length << endl;
+  int count2 = max(count02, count22);
+  cout << min(count1, count2) * 2 << endl;
   return 0;
 }

@@ -2,35 +2,24 @@
 using namespace std;
 
 typedef long long int ll;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
-
-int main()
-{
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    int n;
-    cin>>n;
-    int a[n];
-    int count = 0;
-    for (int i = 0; i < n; i++)
-    {
-       cin>>a[i];
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  ll n, count = 0;
+  cin >> n;
+  vector<int> vec(n);
+  for (int i = 0; i < n; i++) {
+    cin >> vec[i];
+  }
+  for (int i = 0; i < n; i++) {
+    if (vec[i] == 1) {
+      count++;
     }
-    for (int i = 0; i < n; i++)
-    {
-        if (a[i] == 1)
-        {
-            count++;
-        } 
-    }
-    if (count >= 1)
-    {
-        cout<<"HARD"<<endl;
-    }
-    else
-    {
-        cout<<"EASY"<<endl;
-    } 
-    return 0;
+  }
+  if (count >= 1) {
+    cout << "HARD" << '\n';
+  } else {
+    cout << "EASY" << '\n';
+  }
+  return 0;
 }

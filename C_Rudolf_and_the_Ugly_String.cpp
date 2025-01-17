@@ -6,16 +6,14 @@ void solve() {
   ll n, count = 0, i = 0;
   string s;
   cin >> n >> s;
-  while (i < n - 2) {
+  for (ll i = 0; i < n; i++) {
     if ((s[i] == 'm' && s[i + 1] == 'a' && s[i + 2] == 'p') ||
         (s[i] == 'p' && s[i + 1] == 'i' && s[i + 2] == 'e')) {
       count++;
-      s.erase(i, 3);
-    } else {
-      i++;
+      i += 2;
     }
   }
-  cout << count << endl;
+  cout << count << '\n';
 }
 int main() {
   ios::sync_with_stdio(0);

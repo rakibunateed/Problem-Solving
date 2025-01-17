@@ -1,23 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
-bool composite(int num) {
-  if (num <= 1) return 0;
-  for (int i = 2; i * i <= num; i++) {
-    if (num % i == 0) return 1;
+
+typedef long long int ll;
+bool composite(int n) {
+  if (n <= 1) return false;
+  for (int i = 2; i * i <= n; i++) {
+    if (n % i == 0) {
+      return true;
+    }
   }
-  return 0;
+  return false;
 }
 int main() {
-  int n;
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  ll n;
   cin >> n;
-
-  for (int x = 4; x <= n / 2; x++) {
-    int y = n - x;
-    if (composite(x) && composite(y)) {
-      cout << x << " " << y << endl;
+  for (ll i = 4; i <= n / 2; i++) {
+    ll j = n - i;
+    if (composite(i) && composite(j)) {
+      cout << i << " " << j << '\n';
       break;
     }
   }
-
   return 0;
 }

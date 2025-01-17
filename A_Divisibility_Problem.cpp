@@ -2,26 +2,26 @@
 using namespace std;
 
 typedef long long int ll;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
-
-void solve()
-{
-    ll a,b;
-    cin>>a>>b;
-    ll count = 0;
-
-    
-}
-int main()
-{
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    ll t;
-    cin >> t;
-    while (t--)
-    {
-        solve();
+void solve() {
+  ll a, b, count = 0;
+  cin >> a >> b;
+  while (true) {
+    if (a % b == 0) {
+      break;
+    } else {
+      a++;
+      count++;
     }
-    return 0;
+  }
+  cout << count << '\n';
+}
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  ll t;
+  cin >> t;
+  while (t--) {
+    solve();
+  }
+  return 0;
 }

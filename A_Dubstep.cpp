@@ -1,32 +1,22 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
+typedef long long int ll;
+typedef vector<int> vi;
+typedef pair<int, int> pi;
+
 int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
   string s;
   cin >> s;
-  string result;
-  string wub = "WUB";
-  bool spaceNeeded = false;
-
-  for (int i = 0; i < s.length();) {
-    // Check if "WUB" starts at position i
-    if (i + 2 < s.length() && s[i] == 'W' && s[i + 1] == 'U' &&
-        s[i + 2] == 'B') {
-      // Only add a space if needed (not at the beginning and no consecutive
-      // spaces)
-      if (!result.empty() && !spaceNeeded) {
-        result += ' ';
-        spaceNeeded = true;  // Indicate that we added a space
-      }
-      i += 3;  // Skip past "WUB"
+  for (int i = 0; i < s.length(); i++) {
+    if (s[i] == 'W' && s[i + 1] == 'U' && s[i + 2] == 'B') {
+      cout << " ";
+      i += 2;
     } else {
-      // Add current character to result and reset spaceNeeded flag
-      result += s[i];
-      spaceNeeded = false;
-      i++;
+      cout << s[i];
     }
   }
-  cout << result << endl;
-
   return 0;
 }
