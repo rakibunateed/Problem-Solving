@@ -1,26 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-typedef vector<int> vi;
+const ll mx = 2e5 + 123;
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-  ll n, t, sum = 0, count = 0, j = 0;
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ll n, t, s = 0, cnt = 0;
   cin >> n >> t;
-  vi vec(n);
-  for (int i = 0; i < n; i++) {
-    cin >> vec[i];
-  }
-  for (int i = 0; i < n; i++) {
-    sum += vec[i];
-    if (sum <= t) {
-      count++;
-    } else {
-      sum -= vec[j];
+  vector<ll> v(n);
+  for (ll i = 0; i < n; i++) cin >> v[i];
+  for (ll i = 0, j = 0; i < n; i++) {
+    s += v[i];
+    if (s <= t)
+      cnt++;
+    else {
+      s -= v[j];
       j++;
     }
   }
-  cout << count << endl;
+  cout << cnt << '\n';
   return 0;
 }

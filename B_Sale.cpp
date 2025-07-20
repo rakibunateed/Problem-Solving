@@ -1,20 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
+const ll mx = 2e5 + 123;
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   ll n, m;
   cin >> n >> m;
-  vector<int> vec(n);
-  for (ll i = 0; i < n; i++) cin >> vec[i];
-  sort(vec.begin(), vec.end());
+  vector<ll> v(n);
+  for (ll i = 0; i < n; i++) cin >> v[i];
+  sort(v.begin(), v.end());
   ll earn = 0;
   for (ll i = 0; i < m; i++) {
-    if (vec[i] <= 0) {
-      earn += abs(vec[i]);
-    }
+    if (v[i] <= 0) earn += abs(v[i]);
   }
   cout << earn << '\n';
   return 0;

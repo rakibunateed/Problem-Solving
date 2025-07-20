@@ -1,23 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
-
+void solve() {
+  ll n;
+  cin >> n;
+  ll cnt = 0;
+  for (ll i = 0; i < n; i++) {
+    ll r1 = i % 3;
+    ll r2 = i % 5;
+    if (r1 == r2) {
+      cnt++;
+    }
+  }
+  cout << cnt << '\n';
+}
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-  ll n, m;
-  cin >> n, m;
-  ll a[m];
-  for (int i = 0; i < m; i++) {
-    cin >> a[i];
-  }
-
-  for (int i = 0; i < m; i++) {
-    cout << a[i] << " ";
-  }
-
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ll t;
+  cin >> t;
+  while (t--) solve();
   return 0;
 }

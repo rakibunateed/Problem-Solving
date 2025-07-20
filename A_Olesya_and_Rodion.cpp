@@ -10,12 +10,22 @@ int main() {
   cin.tie(0);
   ll n, t;
   cin >> n >> t;
-  int i = 1;
-  while (i++) {
-    if (i % t == 0) {
-      cout << i << endl;
+  for (ll i = 1;; i++) {
+    string s = "", s1 = "";
+    s += i;
+    if (s.length() == n) {
+      ll m = stoll(s);
+      ll k = m % t;
+      ll d = m / t;
+      s1 += d;
+      if (k == 0) {
+        if (s1.length() == n) {
+          cout << i << '\n';
+          break;
+        }
+      }
     }
-    }
+  }
 
   return 0;
 }

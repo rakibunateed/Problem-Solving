@@ -1,9 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define mod 1e9 + 7
 typedef long long int ll;
+const ll mx = 2e5 + 123;
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   ll n;
   cin >> n;
   ll cnt1 = 0, cnt2 = 0, cnt3 = 0, cnt4 = 0;
@@ -26,11 +29,12 @@ int main() {
   cnt3 -= mn;
   totalCount += cnt3;
   totalCount += cnt2 / 2;
-  if (cnt2 % 2 == 1) {
-    totalCount++;
-    cnt1 -= min((ll)0, cnt1);
-  }
-  totalCount += (cnt1 + 3) / 4;
+  cnt2 = cnt2 * 2 % 4;
+  ll thirdSum = cnt2 + cnt1;
+  if (thirdSum % 4 == 0)
+    totalCount += thirdSum / 4;
+  else
+    totalCount += (thirdSum / 4) + 1;
   cout << totalCount << '\n';
   return 0;
 }

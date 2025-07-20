@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-void solve() {
+#define mod 1e9 + 7
+typedef long long int ll;
+const ll mx = 2e5 + 123;
+void solution() {
   ll n, a, b, c;
   cin >> n >> a >> b >> c;
   ll sum = a + b + c;
@@ -24,12 +25,11 @@ void solve() {
   cout << count << '\n';
 }
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-  int t;
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ll t;
   cin >> t;
-  while (t--) {
-    solve();
-  }
+  while (t--) solution();
   return 0;
 }

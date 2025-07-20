@@ -1,34 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-void solve() {
-  ll n, k, count1 = 0, count2 = 0, countB = 0;
+const ll mx = 2e5 + 123;
+void solution() {
+  ll n, k, cnt = 0;
   string s;
   cin >> n >> k >> s;
-  for (ll i = 0; i < n; i++) {
-    if (s[i] == 'W') {
-      count1 = max(count1, count2);
-      count2 = 0;
-      continue;
-    }
-    count2++;
-    if (s[i] == 'B') {
-      countB++;
-    }
+  for (ll i = 0; i < k; i++) {
+    if (s[i] == 'W') cnt++;
   }
-  ll count = max(count1, count2);
-  ll extra1 = k - count;
-  ll extra2 = k - countB;
-  cout << count << '\n';
+  ll ans = cnt;
+  for (ll i = k; i < n; i++) {
+    if (s[i] == 'W') cnt++;
+    if (s[i - k] == 'W') cnt--;
+    ans = min(ans, cnt);
+  }
+  cout << ans << '\n';
 }
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   ll t;
   cin >> t;
-  while (t--) {
-    solve();
-  }
+  while (t--) solution();
   return 0;
 }

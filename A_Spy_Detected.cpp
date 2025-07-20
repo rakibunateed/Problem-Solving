@@ -1,36 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-void solve() {
+const ll mx = 2e5 + 123;
+void solution() {
   ll n;
   cin >> n;
-  vector<int> vec(n);
-  for (int i = 0; i < n; i++) {
-    cin >> vec[i];
-  }
-  if (vec[0] != vec[1]) {
-    if (vec[0] != vec[2]) {
-      cout << 1 << endl;
-    } else {
-      cout << 2 << endl;
-    }
+  vector<ll> v(n);
+  for (ll i = 0; i < n; i++) cin >> v[i];
+  if (v[0] != v[1]) {
+    if (v[0] != v[2])
+      cout << 1 << '\n';
+    else
+      cout << 2 << '\n';
   } else {
-    for (int i = 2; i < n; i++) {
-      if (vec[i] != vec[0]) {
-        cout << i + 1 << endl;
+    for (ll i = 2; i < n; i++) {
+      if (v[i] != v[0]) {
+        cout << i + 1 << '\n';
         break;
       }
     }
   }
 }
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   ll t;
   cin >> t;
-  while (t--) {
-    solve();
-  }
+  while (t--) solution();
   return 0;
 }

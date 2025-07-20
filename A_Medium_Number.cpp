@@ -1,23 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-void solve() {
-  ll a, b, c;
-  cin >> a >> b >> c;
-  ll first = max({a, b, c});
-  ll third = min({a, b, c});
-  ll sum = a + b + c;
-  ll second = sum - first - third;
-  cout << second << '\n';
+const ll mx = 2e5 + 123;
+void solution() {
+  vector<ll> v(3);
+  for (ll i = 0; i < 3; i++) cin >> v[i];
+  sort(v.begin(), v.end());
+  cout << v[1] << '\n';
 }
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   ll t;
   cin >> t;
-  while (t--) {
-    solve();
-  }
+  while (t--) solution();
   return 0;
 }

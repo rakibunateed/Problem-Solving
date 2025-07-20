@@ -1,23 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
+const ll mx = 2e5 + 123;
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-  ll n, sum = 0;
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ll n, s = 0;
   cin >> n;
-  vector<ll> vec(n);
-  for (ll i = 0; i < n; i++) {
-    cin >> vec[i];
-  }
-  sort(vec.begin(), vec.end(), greater<ll>());
+  vector<ll> v(n);
+  for (ll i = 0; i < n; i++) cin >> v[i];
+  sort(v.rbegin(), v.rend());
   for (ll i = 0; i < n - 1; i++) {
-    if (vec[i] > vec[i + 1]) {
-      sum += abs(vec[i] - vec[i + 1]);
-      vec[i + 1] = vec[i];
+    if (v[i] > v[i + 1]) {
+      s += abs(v[i] - v[i + 1]);
+      v[i + 1] = v[i];
     }
   }
-  cout << sum << '\n';
+  cout << s << '\n';
   return 0;
 }

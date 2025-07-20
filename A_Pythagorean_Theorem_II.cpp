@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
 const ll mx = 2e8 + 12;
 bool isPerfectSquare[mx];
-
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   ll n;
   cin >> n;
   for (ll i = 1; i <= n; i++) {

@@ -1,23 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
-
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   ll n;
   cin >> n;
-  ll a[n];
+  vector<ll> v(n);
   for (int i = 0; i < n; i++) {
-    cin >> a[i];
+    cin >> v[i];
   }
-  sort(a, a + n);
+  sort(v.begin(), v.end());
   for (int i = 0; i < n; i++) {
-    cout << a[i] << " ";
+    cout << v[i] << " ";
   }
-  cout << endl;
+  cout << '\n';
   return 0;
 }

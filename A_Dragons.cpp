@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 typedef long long int ll;
+#define mod 1e9 + 7
 typedef pair<int, int> pi;
 int main() {
   ios::sync_with_stdio(0);
@@ -17,10 +17,10 @@ int main() {
     if (s > dragons[i].first) {
       s += dragons[i].second;
     } else {
-      cout << "NO" << endl;
+      cout << "NO\n";
       return 0;
     }
   }
-  cout << "YES" << endl;
+  cout << "YES\n";
   return 0;
 }

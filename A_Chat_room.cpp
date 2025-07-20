@@ -14,10 +14,10 @@ int main() {
       j++;
     }
   }
-  if (count >= 5) {
-    cout << "YES" << endl;
+  if (count == 5) {
+    cout << "YES\n";
   } else {
-    cout << "NO" << endl;
+    cout << "NO\n";
   }
   return 0;
 }

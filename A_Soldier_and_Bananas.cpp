@@ -1,24 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
-
+const ll mx = 2e5 + 123;
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   ll k, n, w;
   cin >> k >> n >> w;
   ll total = 0;
-  for (int i = 1; i <= w; i++) {
-    total += (i * k);
-  }
+  for (ll i = 1; i <= w; i++) total += (i * k);
   if (total > n) {
     ll need = total - n;
-    cout << need << endl;
-  } else {
-    cout << "0" << endl;
-  }
+    cout << need << '\n';
+  } else
+    cout << "0" << '\n';
   return 0;
 }

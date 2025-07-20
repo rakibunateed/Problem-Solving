@@ -1,36 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
-
-void solve()
-{
-    string s,firstWord,secondWord;
-    cin>>s;
-    ll count = 0,number;
-    if (s.length() <= 10)
-        {
-            cout<<s<<endl;   
-        }
-    else
-        {
-            firstWord =s[0];
-            number = s.length()-2;
-            secondWord = s[s.length()-1];
-            cout<<firstWord<<number<<secondWord<<endl;  
-        }      
+void solution() {
+  string s;
+  cin >> s;
+  if (s.length() > 10)
+    cout << s[0] << s.length() - 2 << s[s.length() - 1] << '\n';
+  else
+    cout << s << '\n';
 }
-int main()
-{
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    ll t;
-    cin >> t;
-    while (t--)
-    {
-        solve();
-    }
-    return 0;
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ll t;
+  cin >> t;
+  while (t--) solution();
+  return 0;
 }

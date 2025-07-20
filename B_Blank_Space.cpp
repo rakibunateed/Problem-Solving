@@ -1,31 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define max(a, b) (a < b ? b : a)
-#define min(a, b) ((a > b) ? b : a)
+#define mod 1e9 + 7
 typedef long long int ll;
-
-void solve() {
-    int n, count1 = 0, count2 = 0;
-    cin >> n;
-    int a[n];
-    for (int i = 0; i < n; i++)
-        cin >> a[i];
-    for (int i = 0; i < n; i++) {
-        if (a[i] == 1) {
-            count1 = max(count1, count2);
-            count2 = 0;
-            continue;
-        }
-        count2++;
+const ll mx = 2e5 + 123;
+void solution() {
+  ll n, cnt1 = 0, cnt2 = 0;
+  cin >> n;
+  vector<ll> v(n);
+  for (ll i = 0; i < n; i++) cin >> v[i];
+  for (ll i = 0; i < n; i++) {
+    if (v[i] == 1) {
+      cnt1 = max(cnt1, cnt2);
+      cnt2 = 0;
+      continue;
     }
-    cout << max(count1, count2) << endl;
+    cnt2++;
+  }
+  cout << max(cnt1, cnt2) << '\n';
 }
-int main(int argc, char const* argv[]) {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    ll t;
-    cin >> t;
-    while (t--)
-        solve();
-    return 0;
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ll t;
+  cin >> t;
+  while (t--) solution();
+  return 0;
 }

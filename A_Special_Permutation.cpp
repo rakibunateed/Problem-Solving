@@ -1,29 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-void solve() {
+const ll mx = 2e5 + 123;
+void solution() {
   ll n;
   cin >> n;
   ll a[n];
-  for (ll i = 0; i < n; i++) {
-    a[i] = i + 1;
-  }
-  for (ll i = 0; i < n - 1; i++) {
-    swap(a[i], a[i + 1]);
-  }
-  for (ll i = 0; i < n; i++) {
-    cout << a[i] << " ";
-  }
+  for (ll i = 0; i < n; i++) a[i] = i + 1;
+  for (ll i = 0; i < n - 1; i++) swap(a[i], a[i + 1]);
+  for (ll i = 0; i < n; i++) cout << a[i] << " ";
   cout << '\n';
 }
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   ll t;
   cin >> t;
-  while (t--) {
-    solve();
-  }
+  while (t--) solution();
   return 0;
 }

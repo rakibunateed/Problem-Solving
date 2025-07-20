@@ -1,21 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-void solve() {
-  ll n, first;
-  cin >> n;
-  first = n % 10;
-  n /= 10;
-  cout << first + n << endl;
+const ll mx = 2e5 + 123;
+void solution() {
+  string s;
+  cin >> s;
+  cout << ((s[0] - '0') + (s[1] - '0')) << '\n';
 }
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   ll t;
   cin >> t;
-  while (t--) {
-    solve();
-  }
+  while (t--) solution();
   return 0;
 }

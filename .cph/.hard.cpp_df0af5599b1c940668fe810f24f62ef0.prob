@@ -1,0 +1,1 @@
+{"name":"Local: hard","url":"c:\\Problem-Solving\\hard.cpp","tests":[{"id":1752327209856,"input":"3 2 5 4","output":""},{"id":1752327228920,"input":"5 2 4 2\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Problem-Solving\\hard.cpp","group":"local","local":true}

@@ -1,29 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
-
-int main()
-{
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    int n,k;
-    cin>>n>>k;
-    int temp = n,find;
-for (int i = 0; i < k; i++)
-{
+const ll mx = 2e5 + 123;
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ll n, k;
+  cin >> n >> k;
+  ll temp = n, find;
+  for (ll i = 0; i < k; i++) {
     find = temp % 10;
-        if (find == 0)
-        {
-            temp = temp / 10;
-        }
-        if (find >= 1)
-        {
-            temp --;
-        }
-}    
-        cout<<temp<<endl;
-    return 0;
+    if (find == 0) temp = temp / 10;
+    if (find >= 1) temp--;
+  }
+  cout << temp << '\n';
+  return 0;
 }

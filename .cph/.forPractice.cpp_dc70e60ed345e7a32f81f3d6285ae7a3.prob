@@ -1,0 +1,1 @@
+{"name":"Local: forPractice","url":"c:\\Problem-Solving\\forPractice.cpp","tests":[{"id":1737801432910,"input":"27","output":"22"},{"id":1737801436894,"input":"4545\n","output":"4444"},{"id":1737807671270,"input":"91730629","output":"91230320"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Problem-Solving\\forPractice.cpp","group":"local","local":true}

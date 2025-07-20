@@ -1,23 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-typedef vector<int> vi;
+const ll mx = 2e5 + 123;
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   ll n, h, width = 0;
   cin >> n >> h;
-  vi vec(n);
+  vector<ll> v(n);
+  for (ll i = 0; i < n; i++) cin >> v[i];
   for (ll i = 0; i < n; i++) {
-    cin >> vec[i];
-  }
-  for (ll i = 0; i < n; i++) {
-    if (vec[i] <= h) {
+    if (v[i] <= h)
       width += 1;
-    } else {
+    else
       width += 2;
-    }
   }
   cout << width << '\n';
   return 0;

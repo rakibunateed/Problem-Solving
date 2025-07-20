@@ -1,28 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-void solve() {
-  ll a, b, c, d, count = 0;
+const ll mx = 2e5 + 123;
+void solution() {
+  ll a, b, c, d, cnt = 0;
   cin >> a >> b >> c >> d;
-  if (a < b) {
-    count++;
-  }
-  if (a < c) {
-    count++;
-  }
-  if (a < d) {
-    count++;
-  }
-  cout << count << '\n';
+  if (a < b) cnt++;
+  if (a < c) cnt++;
+  if (a < d) cnt++;
+  cout << cnt << '\n';
 }
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   ll t;
   cin >> t;
-  while (t--) {
-    solve();
-  }
+  while (t--) solution();
   return 0;
 }

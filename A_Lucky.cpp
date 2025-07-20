@@ -1,33 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define mod 1e9 + 7
 typedef long long int ll;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
-
-void solve() {
+const ll mx = 2e5 + 123;
+void solution() {
   string s;
   cin >> s;
   ll sum1 = 0, sum2 = 0;
-  for (int i = 0; i < 3; i++) {
-    sum1 += s[i];
-  }
-  for (int i = 3; i < 6; i++) {
-    sum2 += s[i];
-  }
-  if (sum1 == sum2) {
-    cout << "YES" << endl;
-  } else {
-    cout << "NO" << endl;
-  }
+  for (ll i = 0; i < 3; i++) sum1 += s[i];
+  for (ll i = 3; i < 6; i++) sum2 += s[i];
+  cout << (sum1 == sum2 ? "YES\n" : "NO\n");
 }
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   ll t;
   cin >> t;
-  while (t--) {
-    solve();
-  }
+  while (t--) solution();
   return 0;
 }
