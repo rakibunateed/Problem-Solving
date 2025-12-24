@@ -2,7 +2,6 @@
 using namespace std;
 #define mod 1e9 + 7
 typedef long long int ll;
-
 void solution() {
   ll n;
   cin >> n;

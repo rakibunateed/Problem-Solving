@@ -12,7 +12,6 @@ int main() {
   if (a * log(b) > c * log(d))
     cout << "YES\n";
   else
-    cout << "No\n";
-
+    cout << "NO\n";
   return 0;
 }

@@ -13,14 +13,9 @@ int main() {
   for (ll i = 0; i < n; i++) cin >> v[i];
   ll mxx = *max_element(v.begin(), v.end());
   ll mnn = *min_element(v.begin(), v.end());
-  ll cnt = 0;
   for (ll i = 0; i < n; i++) {
-    if (v[i] != mxx && v[i] != mnn)
-      vec.push_back(v[i]);
-    else
-      cnt++;
+    if (v[i] != mxx && v[i] != mnn) vec.push_back(v[i]);
   }
-
   cout << vec.size() << '\n';
   return 0;
 }

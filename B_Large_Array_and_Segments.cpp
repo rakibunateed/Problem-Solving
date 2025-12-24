@@ -6,20 +6,19 @@ using namespace std;
 void solve() {
   int t;
   cin >> t;
-  vector<int> a(n);
-  for (int i = 0; i < n; ++i) {
-    cin >> a[i];
-  }
-
-  vector<long long> prefix(n + 1, 0);
-  for (int i = 1; i <= n; ++i) {
-    prefix[i] = prefix[i - 1] + a[i - 1];
-  }
   while (t--) {
     int n, k;
     long long x;
     cin >> n >> k >> x;
+    vector<int> a(n);
+    for (int i = 0; i < n; ++i) {
+      cin >> a[i];
+    }
 
+    vector<long long> prefix(n + 1, 0);
+    for (int i = 1; i <= n; ++i) {
+      prefix[i] = prefix[i - 1] + a[i - 1];
+    }
     long long S = prefix[n];
 
     long long res = 0;

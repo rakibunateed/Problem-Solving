@@ -1,0 +1,1 @@
+{"name":"Local: powerOfTwo","url":"c:\\Problem-Solving\\powerOfTwo.cpp","tests":[{"id":1764340784533,"input":"256","output":"YES"},{"id":1764340791368,"input":"20","output":"NO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Problem-Solving\\powerOfTwo.cpp","group":"local","local":true}

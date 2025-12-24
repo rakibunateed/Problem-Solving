@@ -7,7 +7,6 @@ void solution() {
   string s;
   cin >> s;
   vector<ll> v;
-
   for (ll i = 0; i < s.length(); i++) {
     ll num = s[i] - '0';
     v.push_back(num);
